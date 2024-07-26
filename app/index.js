@@ -15,7 +15,7 @@ export default function Index() {
       <Text
         style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
       >
-        Coffe with Programation
+        Coffee with Programation
       </Text>
 
       <Image
@@ -36,7 +36,7 @@ export default function Index() {
         <Pressable >
 
           <Text style={styles.buttonText}>
-            Acessar Coffe WP
+            Acessar Coffee WP
           </Text>
 
         </Pressable>
