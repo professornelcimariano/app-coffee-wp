@@ -1,6 +1,7 @@
 import { Text, ScrollView, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import list from './products.json';
+import imageMappings from './imageMappings';
 
 export default function Products() {
 
@@ -19,7 +20,7 @@ export default function Products() {
                         params: { id: item.id }
                     }}>
                     <View style={styles.itemContainer}>
-                        <Image source={{ uri: item.image }} style={styles.image} />
+                        <Image source={ imageMappings[item.image] } style={styles.image} />
                         <View style={styles.textContainer}>
                             <Text style={styles.titleProduct}>{item.id}. {item.title}</Text>
                             <Text style={styles.description}>{item.description}</Text>
@@ -59,6 +60,7 @@ const styles = StyleSheet.create({
     textContainer: {
         flex: 1,
         marginLeft: 10,
+        maxWidth: '100%',
     },
     titleProduct: {
         fontSize: 18,
@@ -67,5 +69,6 @@ const styles = StyleSheet.create({
     description: {
         marginTop: 5,
         fontSize: 14,
+        maxWidth: '100%',
     },
 });

@@ -2,6 +2,7 @@ import React from 'react'
 import { Text, View, StyleSheet, Image, ScrollView } from 'react-native'
 import { useLocalSearchParams } from 'expo-router'
 import list from '../products.json'
+import imageMappings from '../imageMappings';
 
 export default function coffeeSingle() {
     const { id } = useLocalSearchParams();
@@ -15,7 +16,7 @@ export default function coffeeSingle() {
             <Text style={styles.description}> {data.description} </Text>
             <Image
                 style={styles.image}
-                source={{ uri: data.image }}
+                source={imageMappings[data.image]}
             />
         </ScrollView>
     )
