@@ -12,12 +12,15 @@ export default function coffeeSingle() {
 
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.titleProduct}>  {data.title} </Text>
-            <Text style={styles.description}> {data.description} </Text>
             <Image
                 style={styles.image}
                 source={imageMappings[data.image]}
             />
+            <View style={styles.containerSingle}>
+                <Text style={styles.titleProduct}>  {data.title} </Text>
+                <Text style={styles.description}> {data.description} </Text>
+
+            </View>
         </ScrollView>
     )
 }
@@ -25,13 +28,16 @@ export default function coffeeSingle() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 20,
         backgroundColor: '#F2D8C2',
     },
+    containerSingle: {
+        padding: 20,
+    },
     image: {
-        width: 200,
+        width: 'auto',
         height: 200,
-        borderRadius: 8,
+        borderEndEndRadius: 15,
+        borderEndStartRadius: 15,
     },
     titleProduct: {
         fontSize: 18,

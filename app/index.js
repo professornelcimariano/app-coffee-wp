@@ -1,7 +1,16 @@
 import { Text, View, Image, Pressable, StyleSheet } from "react-native";
 import { Link } from 'expo-router';
+import { useFonts } from 'expo-font';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Index() {
+  let [fontsLoaded] = useFonts({
+    'Roboto-Light': require('../assets/fonts/Roboto-Light.ttf'),
+  });
+
+  if (!fontsLoaded) {
+    return null; // Ou um carregamento ou mensagem
+  }
   return (
     <View
       style={{
@@ -13,9 +22,9 @@ export default function Index() {
     >
 
       <Text
-        style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
+        style={{ fontFamily: 'Roboto-Light', fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
       >
-        Coffee with Programation
+              Coffee With Programation
       </Text>
 
       <Image
@@ -28,15 +37,17 @@ export default function Index() {
       />
 
       <Text
-        style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
-      >{'</> {...} function'}</Text>
+        style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
+        <Icon name="coffee" size={30} color="#fff" /> 
+        {'</> {...} function'}
+        </Text>
 
-      
+
       <Link href="/products" style={styles.button} asChild>
         <Pressable >
 
           <Text style={styles.buttonText}>
-            Acessar Coffee WP
+            Ver menu             
           </Text>
 
         </Pressable>
@@ -60,6 +71,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 15,
+    borderRadius: 30,
 
   },
   buttonText: {
