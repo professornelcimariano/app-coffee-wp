@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 10,
         flexDirection: 'column',
+        width: '100%',
         //alignItems: 'center', // Alinha a imagem e o texto verticalmente
         // position: 'relative', // Permite o posicionamento absoluto do botão
     },
