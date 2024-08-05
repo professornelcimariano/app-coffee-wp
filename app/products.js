@@ -1,4 +1,4 @@
-import { Text, ScrollView, View, Image, StyleSheet, Dimensions } from "react-native";
+import { Text, ScrollView, View, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { Link } from "expo-router"; // Importar Link
 import list from './products.json';
 import imageMappings from './imageMappings';
@@ -20,16 +20,17 @@ export default function Products() {
                                 <Text style={styles.description}>{item.description}</Text>
                             </View>
                         </View>
-                        <Link
-                            href={{
-                                pathname: "/coffeesingle/[id]",
-                                params: { id: item.id }
-                            }}
-                            style={styles.itemLink} // Estilo do link para ser um botão
-                        >
-                            <Text style={styles.linkText}>Acessar</Text>
-                        </Link>
-
+                        <TouchableOpacity>
+                            <Link
+                                href={{
+                                    pathname: "/coffeesingle/[id]",
+                                    params: { id: item.id }
+                                }}
+                                style={styles.itemLink} // Estilo do link para ser um botão
+                            >
+                                <Text style={styles.linkText}>Acessar</Text>
+                            </Link>
+                        </TouchableOpacity>
                     </View>
 
                 </View>
@@ -85,7 +86,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 16,
-        
+
     },
     image: {
         width: 100,

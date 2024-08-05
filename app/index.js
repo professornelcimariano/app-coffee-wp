@@ -1,4 +1,4 @@
-import { Text, View, Image, Pressable, StyleSheet } from "react-native";
+import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { Link } from 'expo-router';
 import { useFonts } from 'expo-font';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -24,7 +24,7 @@ export default function Index() {
       <Text
         style={{ fontFamily: 'Roboto-Light', fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
       >
-              Coffee With Programation
+        Coffee With Programation
       </Text>
 
       <Image
@@ -38,19 +38,19 @@ export default function Index() {
 
       <Text
         style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
-        <Icon name="coffee" size={30} color="#fff" /> 
+        <Icon name="coffee" size={30} color="#fff" />
         {'</> {...} function'}
-        </Text>
+      </Text>
 
 
       <Link href="/products" style={styles.button} asChild>
-        <Pressable >
+        <TouchableOpacity >
 
           <Text style={styles.buttonText}>
-            Ver menu             
+            Ver menu
           </Text>
 
-        </Pressable>
+        </TouchableOpacity>
       </Link>
 
 
