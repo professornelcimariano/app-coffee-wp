@@ -2,12 +2,14 @@ import { Text, ScrollView, View, Image, StyleSheet, TouchableOpacity } from "rea
 import { Link } from "expo-router"; // Importar Link
 import list from './products.json';
 import imageMappings from './imageMappings';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default function Products() {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.title}>
-                Nossos cafés e Linguagens
+                Nossos cafés e Linguagens <Icon name="code" size={20} color="#fff" />
             </Text>
 
             {list.listProduct.map((item) => (
@@ -28,7 +30,14 @@ export default function Products() {
                                 }}
                                 style={styles.itemLink} // Estilo do link para ser um botão
                             >
-                                <Text style={styles.linkText}>Acessar</Text>
+
+                                <Text style={styles.linkText}>
+                                    Acessar
+                                </Text>
+                                <View style={styles.linkIcon}>
+                                    <Icon name="chevron-right" size={20} color="#fff" />
+                                </View>
+
                             </Link>
                         </TouchableOpacity>
                     </View>
@@ -73,29 +82,36 @@ const styles = StyleSheet.create({
         // position: 'relative', // Permite o posicionamento absoluto do botão
     },
     itemLink: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         backgroundColor: '#260F0D', // Cor de fundo do botão
         paddingVertical: 15, // Espaçamento vertical do botão
         paddingHorizontal: 20, // Espaçamento horizontal do botão
         marginTop: 10, // Espaço entre o item e o botão
-        alignItems: 'center', // Centraliza o texto dentro do botão
-        justifyContent: 'center', // Alinha o texto verticalmente no botão
+        // alignItems: 'center', // Centraliza o texto dentro do botão
+        // justifyContent: 'center', // Alinha o texto verticalmente no botão
         borderRadius: 30,
-        textAlign: 'center'
+        // textAlign: 'center'
+        boxShadow: '2px 4px 3px 1px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
     },
     linkText: {
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 16,
-
+    },
+    linkIcon: {
     },
     image: {
         width: 100,
         height: 100,
         borderRadius: 8,
+        boxShadow: '5px 4px 3px 1px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
     },
     textContainer: {
         flex: 1,
-        marginLeft: 10,
+        marginLeft: 20,
+        marginRight: 20,
     },
     titleProduct: {
         fontSize: 18,
@@ -106,5 +122,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         lineHeight: 18,
         textAlign: 'left',
+        textAlign: 'justify',
     },
 });

@@ -22,7 +22,7 @@ export default function Index() {
     >
 
       <Text
-        style={{ fontFamily: 'Roboto-Light', fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
+        style={{ fontFamily: 'Roboto-Light', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
       >
         Coffee With Programation
       </Text>
@@ -37,19 +37,16 @@ export default function Index() {
       />
 
       <Text
-        style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
-        <Icon name="coffee" size={30} color="#fff" />
-        {'</> {...} function'}
+        style={{ marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
+        <Icon name="coffee" size={30} color="#fff" /> <Icon name="code" size={20} color="#fff" /> print, function
       </Text>
 
 
       <Link href="/products" style={styles.button} asChild>
-        <TouchableOpacity >
-
+        <TouchableOpacity>
           <Text style={styles.buttonText}>
             Ver menu
-          </Text>
-
+          </Text> 
         </TouchableOpacity>
       </Link>
 
@@ -62,21 +59,22 @@ export default function Index() {
 const styles = StyleSheet.create({
 
   button: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    margin: 20,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    width: '90%',
+    paddingVertical: 15,
+    paddingHorizontal: 15,
     backgroundColor: '#F2D8C2',
     alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 15,
     borderRadius: 30,
-
+    boxShadow: '5px 4px 3px 1px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
   },
   buttonText: {
+    flex: 1,
     fontSize: 18,
     color: '#010101',
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
