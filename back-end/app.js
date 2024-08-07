@@ -6,7 +6,17 @@ app.use(express.json());
 const languages = require('./models/languages')
 
 
+app.get('/', (req, res) => {
+    res.send('Rota Inicial Node App Coffe WP')
+})
 
+app.get('/sobre', (req, res) => {
+    res.json({
+        "id": 1,
+        "name": "Curso de Informática",
+        "Description": "O Aplicativo Coffee With Programation (Professor Nelci Mariano) é um app desenvolvido em React-Nativo cujo o objetivo é ser um material de consulta para todos os alunos que tem aula de Programação Mobile comigo, a idéia é permitir que os alunos tenha acesso ao Projeto através do Git Hub e assim verificar na prática através da codificação como desenvolver seus projetos de app."
+    })
+})
 
 
 

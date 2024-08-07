@@ -1,4 +1,4 @@
-import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { Text, View, Image, TouchableOpacity, StyleSheet, ImageBackground } from "react-native";
 import { Link } from 'expo-router';
 import { useFonts } from 'expo-font';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -13,45 +13,45 @@ export default function Index() {
     return null; // Ou um carregamento ou mensagem
   }
   return (
-
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#260F0D'
-      }}
+    <ImageBackground
+      resizeMode="cover"
+      source={{ uri: '../assets/images/bkg-one.jpg' }}
+      style={styles.backgroundOne}
     >
+      <View style={styles.overlayOne}>
 
-      <Text
-        style={{ fontFamily: 'Roboto-Light', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
-      >
-        Coffee With Programation
-      </Text>
+        <Text
+          style={{ fontFamily: 'Roboto-Light', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
+        >
+          Coffee With Programation
+        </Text>
 
-      <Image
-        style={{
-          width: 300,
-          height: 300,
-          borderRadius: 300
-        }}
-        source={require('../assets/images/coffe.jpg')}
-      />
+        <Image
+          style={{
+            width: 300,
+            height: 300,
+            borderRadius: 300,
+            opacity: 1
+          }}
+          source={require('../assets/images/coffe.jpg')}
+        />
 
-      <Text
+        <Text
 
-        style={{ marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
-        <Icon name="coffee" size={30} color="#fff" /> <Icon name="code" size={20} color="#fff" /> print, function
-      </Text>
+          style={{ marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
+          <Icon name="coffee" size={30} color="#fff" /> <Icon name="code" size={20} color="#fff" /> print, function
+        </Text>
 
-      <Link href="/products" style={styles.buttonOne} asChild>
-        <TouchableOpacity>
-          <Text style={styles.buttonOneText}>
-            Ver menu
-          </Text>
-        </TouchableOpacity>
-      </Link>
-    </View>
+        <Link href="/products" style={styles.buttonOne} asChild>
+          <TouchableOpacity>
+            <Text style={styles.buttonOneText}>
+              Ver menu
+            </Text>
+          </TouchableOpacity>
+        </Link>
+      </View>
+    </ImageBackground>
+
   );
 }
 
