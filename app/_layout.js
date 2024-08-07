@@ -6,6 +6,7 @@ export default function RootLayout() {
       screenOptions={{
         headerStyle: {
           backgroundColor: "#010101",
+          borderBottomWidth: 0, // Remove a borda
         },
         headerTintColor: "#fff",
         headerTitleStyle: {

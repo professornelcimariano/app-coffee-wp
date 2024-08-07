@@ -73,17 +73,19 @@ const styles = StyleSheet.create({
     },
     itemLink: {
         backgroundColor: '#260F0D', // Cor de fundo do botão
-        borderRadius: 8, // Bordas arredondadas
         paddingVertical: 15, // Espaçamento vertical do botão
         paddingHorizontal: 20, // Espaçamento horizontal do botão
         marginTop: 10, // Espaço entre o item e o botão
         alignItems: 'center', // Centraliza o texto dentro do botão
         justifyContent: 'center', // Alinha o texto verticalmente no botão
+        borderRadius: 30,
+        textAlign: 'center'
     },
     linkText: {
         color: '#fff',
         fontWeight: 'bold',
         fontSize: 16,
+        
     },
     image: {
         width: 100,
