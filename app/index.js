@@ -1,7 +1,8 @@
-import { Text, View, Image, Pressable, StyleSheet } from "react-native";
+import { Text, View, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { Link } from 'expo-router';
 import { useFonts } from 'expo-font';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import styles from './styles';
 
 export default function Index() {
   let [fontsLoaded] = useFonts({
@@ -12,6 +13,7 @@ export default function Index() {
     return null; // Ou um carregamento ou mensagem
   }
   return (
+
     <View
       style={{
         flex: 1,
@@ -22,9 +24,9 @@ export default function Index() {
     >
 
       <Text
-        style={{ fontFamily: 'Roboto-Light', fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
+        style={{ fontFamily: 'Roboto-Light', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}
       >
-              Coffee With Programation
+        Coffee With Programation
       </Text>
 
       <Image
@@ -37,46 +39,24 @@ export default function Index() {
       />
 
       <Text
-        style={{ fontWeight: 'bold', marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
-        <Icon name="coffee" size={30} color="#fff" /> 
-        {'</> {...} function'}
-        </Text>
 
+        style={{ marginBottom: 20, marginTop: 20, color: '#fff', fontSize: 20 }}>
+        <Icon name="coffee" size={30} color="#fff" /> <Icon name="code" size={20} color="#fff" /> print, function
+      </Text>
 
-      <Link href="/products" style={styles.button} asChild>
-        <Pressable >
-
-          <Text style={styles.buttonText}>
-            Ver menu             
+      <Link href="/products" style={styles.buttonOne} asChild>
+        <TouchableOpacity>
+          <Text style={styles.buttonOneText}>
+            Ver menu
           </Text>
-
-        </Pressable>
+        </TouchableOpacity>
       </Link>
-
-
-
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-
-  button: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    margin: 20,
-    backgroundColor: '#F2D8C2',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 15,
-    borderRadius: 30,
-
-  },
-  buttonText: {
-    fontSize: 18,
-    color: '#010101',
-    fontWeight: 'bold',
-  },
-});
+// const styles = StyleSheet.create({
+//   button: {
+//     display: 'flex',
+//   },
+// });
