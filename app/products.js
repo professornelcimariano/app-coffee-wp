@@ -10,7 +10,7 @@ export default function Products() {
         <ScrollView>
             <View style={styles.container}>
                 <Text style={styles.titleTwo}>
-                    Nossos cafés e Linguagens <Icon name="code" size={20} color="#fff" />
+                    Qual café te acompanhará no Deploy? <Icon name="code" size={20} color="#fff" />
                 </Text>
 
                 {list.listProduct.map((item) => (

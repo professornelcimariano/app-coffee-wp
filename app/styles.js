@@ -2,9 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
+        // display: 'flex',
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         backgroundColor: '#260F0D',
         padding: 20,
     },
@@ -30,8 +31,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         width: '90%',
-        paddingVertical: 15,
-        paddingHorizontal: 15,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        marginBottom: 5,
         backgroundColor: '#F2D8C2',
         alignItems: 'center',
         borderRadius: 30,
@@ -109,6 +111,18 @@ const styles = StyleSheet.create({
         lineHeight: 18,
         textAlign: 'left',
         textAlign: 'justify',
+    },
+    titleThree: { 
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 22,
+        marginBottom: 10,
+    },
+    descriptionThree: { 
+        color: 'white',
+        textAlign: 'justify',
+        fontSize: 14,
+
     },
 });
 

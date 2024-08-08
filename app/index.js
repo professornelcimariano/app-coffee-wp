@@ -15,7 +15,7 @@ export default function Index() {
   return (
     <ImageBackground
       resizeMode="cover"
-      source={{ uri: '../assets/images/bkg-one.jpg' }}
+      source={require('../assets/images/bkg-one.jpg')}
       style={styles.backgroundOne}
     >
       <View style={styles.overlayOne}>
@@ -45,10 +45,27 @@ export default function Index() {
         <Link href="/products" style={styles.buttonOne} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Ver menu
+              Cafés
             </Text>
           </TouchableOpacity>
         </Link>
+
+        <Link href="/about" style={styles.buttonOne} asChild>
+          <TouchableOpacity>
+            <Text style={styles.buttonOneText}>
+              Sobre
+            </Text>
+          </TouchableOpacity>
+        </Link>
+
+        <Link href="/languages" style={styles.buttonOne} asChild>
+          <TouchableOpacity>
+            <Text style={styles.buttonOneText}>
+              Linguagens
+            </Text>
+          </TouchableOpacity>
+        </Link>
+
       </View>
     </ImageBackground>
 
