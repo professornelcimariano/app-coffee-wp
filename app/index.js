@@ -53,7 +53,7 @@ export default function Index() {
         <Link href="/about" style={styles.buttonOne} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Sobre
+              Sobre o App
             </Text>
           </TouchableOpacity>
         </Link>
@@ -62,6 +62,14 @@ export default function Index() {
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
               Linguagens
+            </Text>
+          </TouchableOpacity>
+        </Link>
+
+        <Link href="/about2" style={styles.buttonOne} asChild>
+          <TouchableOpacity>
+            <Text style={styles.buttonOneText}>
+              About2
             </Text>
           </TouchableOpacity>
         </Link>
