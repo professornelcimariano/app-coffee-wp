@@ -46,16 +46,31 @@ export default function About() {
         );
     }
     return (
-
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={[styles.container, styles.backgroundPrimary]}>
             {data && (
                 <>
                     <Text style={styles.titleThree}>{data.name}</Text>
                     <Text style={styles.descriptionThree}>{data.Description}</Text>
                 </>
             )}
+
+            {/* <View style={{ flex: 1, flexDirection: 'row' }}>
+                <View style={{ flex: 1, backgroundColor: "red" }}>
+
+                </View>
+                <View style={{ flex: 1, backgroundColor: "green" }}>
+
+                </View>
+                <View style={{ flex: 1, backgroundColor: "yellow" }}>
+
+                </View>
+            </View>
+            <View style={{ flex: 1,}}>
+
+            </View> */}
+
+
+
         </ScrollView>
-
-
     );
 }
