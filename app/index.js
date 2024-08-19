@@ -42,7 +42,7 @@ export default function Index() {
           <Icon name="coffee" size={30} color="#fff" /> <Icon name="code" size={20} color="#fff" /> print, function
         </Text>
 
-        <Link href="/products" style={styles.buttonOne} asChild>
+        <Link href="/products" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
               Cafés
@@ -50,15 +50,15 @@ export default function Index() {
           </TouchableOpacity>
         </Link>
 
-        <Link href="/about" style={styles.buttonOne} asChild>
+        <Link href="/about" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Sobre
+              Sobre o App
             </Text>
           </TouchableOpacity>
         </Link>
 
-        <Link href="/languages" style={styles.buttonOne} asChild>
+        <Link href="/languages" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
               Linguagens

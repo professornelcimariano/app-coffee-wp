@@ -8,13 +8,13 @@ import styles from './styles';
 export default function Products() {
     return (
         <ScrollView>
-            <View style={styles.container}>
+            <View style={[styles.container, styles.backgroundPrimary]}>
                 <Text style={styles.titleTwo}>
                     Qual café te acompanhará no Deploy? <Icon name="code" size={20} color="#fff" />
                 </Text>
 
                 {list.listProduct.map((item) => (
-                    <View key={item.id} style={styles.itemTwo}>
+                    <View key={item.id} style={[styles.itemTwo, styles.backgroundSecond]}>
                         <View style={styles.itemTwoDetails}>
                             <Image source={imageMappings[item.image]} style={styles.imageTwo} />
                             <View style={styles.itemTwoText}>
@@ -28,7 +28,7 @@ export default function Products() {
                                 pathname: "/coffeesingle/[id]",
                                 params: { id: item.id }
                             }}
-                            style={styles.itemTwoButton} // Estilo do link para ser um botão
+                            style={[styles.button, styles.backgroundPrimary]} // Estilo do link para ser um botão
                             asChild
                         >
                             <TouchableOpacity>

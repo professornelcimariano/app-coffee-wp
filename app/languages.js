@@ -19,12 +19,12 @@ export default function Languages() {
             .catch(error => console.error('Erro ao carregar languages:', error));
     }, []);
     return (
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={[styles.container, styles.backgroundPrimary]}>
             <Text style={styles.titleTwo}>
                 <Icon name="code" size={20} color="#fff" />
             </Text>
             {languages.map(item => (
-                <View key={item.id} style={styles.itemTwo}>
+                <View key={item.id} style={[styles.itemTwo, styles.backgroundSecond]}>
                     <View style={styles.itemTwoDetails}>
                         <View style={styles.itemTwoText}>
                             <Text style={styles.itemTwotitleProduct}>{item.id}. {item.name}</Text>
@@ -37,7 +37,7 @@ export default function Languages() {
                             pathname: "/languagessingle/[id]",
                             params: { id: item.id }
                         }}
-                        style={styles.itemTwoButton} // Estilo do link para ser um botão
+                        style={[styles.button, styles.backgroundPrimary]} // Estilo do link para ser um botão
                         asChild
                     >
                         <TouchableOpacity>

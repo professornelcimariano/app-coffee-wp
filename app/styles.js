@@ -1,24 +1,36 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+    backgroundPrimary: { backgroundColor: '#260F0D', },
+    backgroundSecond: { backgroundColor: '#F2D8C2', },
+    button: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingVertical: 10,
+        paddingHorizontal: 10,
+        width: '100%',
+        marginBottom: 5,
+        alignItems: 'center',
+        marginTop: 10,
+        borderRadius: 15,
+        boxShadow: '5px 4px 3px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
+    },
+    scrollview : { flex: 1},
     container: {
-        // display: 'flex',
         flex: 1,
-        // justifyContent: 'center',
-        // alignItems: 'center',
-        backgroundColor: '#260F0D',
         padding: 20,
     },
     backgroundOne: {
         flex: 1,
-        // justifyContent: 'center',
-        // alignItems: 'center',
+        width: '100%',
+        height: '100%',
     },
     overlayOne: {
         ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(38, 15, 13, 0.8)', // Cor preta com 50% de opacidade
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 10,
     },
     textIcon: {
         marginBottom: 20,
@@ -26,19 +38,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 20,
     },
-    buttonOne: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        width: '90%',
-        paddingVertical: 10,
-        paddingHorizontal: 10,
-        marginBottom: 5,
-        backgroundColor: '#F2D8C2',
-        alignItems: 'center',
-        borderRadius: 30,
-        boxShadow: '5px 4px 3px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
-    },
+    
     buttonOneText: {
         flex: 1,
         fontSize: 18,
@@ -54,8 +54,15 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 20
     },
+    imageTwoSingle: {
+        width: 'auto',
+        height: 300,
+        borderEndEndRadius: 15,
+        borderEndStartRadius: 15,
+        marginTop: -20,
+        resizeMode: 'cover',
+    },
     itemTwo: {
-        backgroundColor: '#F2D8C2',
         borderRadius: 8,
         padding: 10,
         marginBottom: 10,
@@ -69,18 +76,7 @@ const styles = StyleSheet.create({
         alignItems: 'center', // Alinha a imagem e o texto verticalmente
         // position: 'relative', // Permite o posicionamento absoluto do botão
     },
-    itemTwoButton: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        backgroundColor: 'transparent',
-        paddingVertical: 15, // Espaçamento vertical do botão
-        paddingHorizontal: 20, // Espaçamento horizontal do botão
-        boxShadow: '2px 4px 3px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
-        backgroundColor: '#260F0D', // Cor de fundo do botão
-        borderRadius: 30,
-        marginTop: 10, // Espaço entre o item e o botão
-    },
+
     itemTwoButtonText: {
         flex: 1,
         color: '#fff',
@@ -112,13 +108,13 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         textAlign: 'justify',
     },
-    titleThree: { 
+    titleThree: {
         color: 'white',
         textAlign: 'center',
         fontSize: 22,
         marginBottom: 10,
     },
-    descriptionThree: { 
+    descriptionThree: {
         color: 'white',
         textAlign: 'justify',
         fontSize: 14,
