@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 export default function RootLayout() {
   return (
     <Stack
+    //Essa parte é para a barra de navegação
       screenOptions={{
         headerStyle: {
           backgroundColor: "#010101",

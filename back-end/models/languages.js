@@ -1,10 +1,10 @@
 const Sequelize = require('sequelize');
 //Conexão com arquivo db que possui a conexão com o banco
 const db = require('./db');
-//Constante Usuário recebe a Table users
+//Constante Language recebe a Table languages
 //https://sequelize.org/v6/manual/model-basics.html
 
-const user = db.define('languages',{
+const languages = db.define('languages',{
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -23,5 +23,5 @@ const user = db.define('languages',{
 //https://sequelize.org/v6/manual/model-basics.html#model-synchronization
 // O user.sync() - verifica se a tabela existe, caso não exista, será criada
 // user.sync();
-user.sync({ alter: true }); // Para fazer alteração na estrutura caso exista
-module.exports = user;
+languages.sync({ alter: true }); // Para fazer alteração na estrutura caso exista
+module.exports = languages;
