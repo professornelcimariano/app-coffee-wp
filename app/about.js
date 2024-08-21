@@ -54,6 +54,20 @@ export default function About() {
                 </>
             )}
 
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
             {/* <View style={{ flex: 1, flexDirection: 'row' }}>
                 <View style={{ flex: 1, backgroundColor: "red" }}>
 

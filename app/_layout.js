@@ -23,6 +23,7 @@ export default function RootLayout() {
       <Stack.Screen name="coffeesingle/[id]" options={{ title: 'Coffee WP' }} />
       <Stack.Screen name="languages" options={{ title: "Linguagens WP" }} />
       <Stack.Screen name="languagessingle/[id]" options={{ title: 'Linguagens WP' }} />
+      <Stack.Screen name="flex" options={{title: 'Flex'}} />
       {/* <Stack.Screen name="tabs/_layout" options={{ }} /> */}
     </Stack>
     
