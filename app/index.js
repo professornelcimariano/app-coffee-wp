@@ -66,6 +66,14 @@ export default function Index() {
           </TouchableOpacity>
         </Link>
 
+        <Link href="/flex" style={[styles.button, styles.backgroundSecond]} asChild>
+          <TouchableOpacity>
+            <Text style={styles.buttonOneText}>
+              Flex
+            </Text>
+          </TouchableOpacity>
+        </Link>
+
       </View>
     </ImageBackground>
 

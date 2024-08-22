@@ -46,15 +46,14 @@ export default function About() {
     }
     return (
         <ScrollView contentContainerStyle={[styles.container, styles.backgroundPrimary]}>
-            <View style={{ flex: 1 }}>
-                {data && (
-                    <>
-                        <Text style={styles.titleThree}>{data.name}</Text>
-                        <Text style={styles.descriptionThree}>{data.Description}</Text>
-                    </>
-                )}
-            </View>
+            {data && (
+                <>
+                    <Text style={styles.titleThree}>{data.name}</Text>
+                    <Text style={styles.descriptionThree}>{data.Description}</Text>
+                </>
+            )}
 
+           
         </ScrollView>
     );
 }
