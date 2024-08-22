@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
 import { API_URL } from './config';
 
-
 export default function About() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -47,29 +46,14 @@ export default function About() {
     }
     return (
         <ScrollView contentContainerStyle={[styles.container, styles.backgroundPrimary]}>
-            {data && (
-                <>
-                    <Text style={styles.titleThree}>{data.name}</Text>
-                    <Text style={styles.descriptionThree}>{data.Description}</Text>
-                </>
-            )}
-
-            {/* <View style={{ flex: 1, flexDirection: 'row' }}>
-                <View style={{ flex: 1, backgroundColor: "red" }}>
-
-                </View>
-                <View style={{ flex: 1, backgroundColor: "green" }}>
-
-                </View>
-                <View style={{ flex: 1, backgroundColor: "yellow" }}>
-
-                </View>
+            <View style={{ flex: 1 }}>
+                {data && (
+                    <>
+                        <Text style={styles.titleThree}>{data.name}</Text>
+                        <Text style={styles.descriptionThree}>{data.Description}</Text>
+                    </>
+                )}
             </View>
-            <View style={{ flex: 1,}}>
-
-            </View> */}
-
-
 
         </ScrollView>
     );
