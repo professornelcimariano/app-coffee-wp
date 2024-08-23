@@ -12,8 +12,7 @@ export default function Products() {
                 <Text style={styles.titleTwo}>
                     Qual café te acompanhará no Deploy? <Icon name="code" size={20} color="#fff" />
                 </Text>
-
-                {list.listProduct.map((item) => (
+                {list.listProduct.map((item) => (                    
                     <View key={item.id} style={[styles.itemTwo, styles.backgroundSecond]}>
                         <View style={styles.itemTwoDetails}>
                             <Image source={imageMappings[item.image]} style={styles.imageTwo} />
@@ -40,7 +39,6 @@ export default function Products() {
                                 </View> */}
                             </TouchableOpacity>
                         </Link>
-
                     </View>
                 ))
                 }

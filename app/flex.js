@@ -1,6 +1,6 @@
 import { View, Text, ScrollView, Image } from "react-native"
 
-export default function Flex() {
+export default function Frameworks() {
     return (
         <ScrollView contentContainerStyle={{ flex: 1, padding: 10 }}>
             <View style={{ display: 'flex', flexDirection: 'column' }}>

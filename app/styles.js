@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
         alignItems: 'center',
         marginTop: 10,
-        borderRadius: 15,
+        borderRadius: 12,
         boxShadow: '5px 4px 3px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
     },
     scrollview : { flex: 1},
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#010101',
         fontWeight: 'bold',
-        textAlign: 'center',
+        // textAlign: 'center',
     },
     titleTwo: {
         textAlign: 'center',

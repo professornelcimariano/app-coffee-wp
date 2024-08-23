@@ -4,6 +4,7 @@ app.use(express.json());
 // Importe da conexão com o banco de dados
 //const db = require('./models/db')
 const languages = require('./models/languages')
+const frameworks = require('./models/frameworks')
 var cors = require('cors')
 /**
  * Configuração do middleware Express.js para habilitar o CORS (Cross-Origin Resource Sharing) em uma aplicação Node.js
@@ -74,6 +75,56 @@ app.get("/select-language/:id", async (req, res) => {
         });
     }
 });
+
+// Frameworks
+
+// SELECT Frameworks
+app.get("/select-frameworks", async (req, res) => { //async define uma função assíncrona
+    await frameworks.findAll({ // await na função assincrona indica o ponto a ser aguardado
+        attributes: ['id', 'name', 'description'], //Indica as colunas
+        order: [['id', 'ASC']] //order by
+    })
+        .then((frameworks) => { // then -> recebe uma função callback, retorna um "objeto-promessa"
+            return res.json({
+                erro: false,
+                frameworks
+            });
+        }).catch(() => {
+            return res.status(400).json({
+                erro: true,
+                mensagem: "Erro: Nenhum registro encontrado!"
+            });
+        });
+});
+
+app.get("/select-framework/:id", async (req, res) => {
+    const languageId = req.params.id; // Capta o id da url
+
+    try {
+        const framework = await frameworks.findOne({
+            where: { id: languageId }, 
+            attributes: ['id', 'name', 'description'],
+        });
+
+        if (framework) {
+            return res.json({
+                erro: false,
+                framework, // Retorna o idioma encontrado
+            });
+        } else {
+            return res.status(404).json({
+                erro: true,
+                mensagem: "Erro: Idioma não encontrado!",
+            });
+        }
+    } catch (error) {
+        return res.status(500).json({
+            erro: true,
+            mensagem: "Erro: Não foi possível buscar o idioma!",
+        });
+    }
+});
+
 
 
 

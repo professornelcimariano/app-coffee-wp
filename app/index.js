@@ -45,7 +45,7 @@ export default function Index() {
         <Link href="/products" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Cafés
+            <Icon name="coffee" size={20} /> Cafés
             </Text>
           </TouchableOpacity>
         </Link>
@@ -53,7 +53,7 @@ export default function Index() {
         <Link href="/about" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Sobre o App
+            <Icon name="bars" size={20} /> Sobre
             </Text>
           </TouchableOpacity>
         </Link>
@@ -61,15 +61,15 @@ export default function Index() {
         <Link href="/languages" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Linguagens
+            <Icon name="code" size={20} /> Linguagens
             </Text>
           </TouchableOpacity>
         </Link>
 
-        <Link href="/flex" style={[styles.button, styles.backgroundSecond]} asChild>
+        <Link href="/frameworks" style={[styles.button, styles.backgroundSecond]} asChild>
           <TouchableOpacity>
             <Text style={styles.buttonOneText}>
-              Flex
+            <Icon name="bookmark" size={20} /> Frameworks
             </Text>
           </TouchableOpacity>
         </Link>
