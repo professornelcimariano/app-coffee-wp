@@ -18,9 +18,9 @@ export default function frameworks() {
             .catch(error => console.error('Erro ao carregar frameworks:', error));
     }, []);
     return (
-        <ScrollView contentContainerStyle={{ flex: 1, padding: 10 }}>
+        <ScrollView contentContainerStyle={{ display: 'flex', padding: 10 }}>
             {frameworks.map(item => (
-                <View style={{ display: 'flex', flexDirection: 'column' }}>
+                <View style={{ flex: 1, flexDirection: 'column' }}>
                     <View style={{ alignItems: 'center', justifyContent: 'center', padding: 20 }}>
                         <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{item.name}</Text>
                     </View>
