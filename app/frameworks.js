@@ -21,9 +21,11 @@ export default function frameworks() {
         <ScrollView contentContainerStyle={{ flex: 1, padding: 10 }}>
             {frameworks.map(item => (
                 <View style={{ display: 'flex', flexDirection: 'column' }}>
+                    
                     <View style={{ alignItems: 'center', justifyContent: 'center', padding: 20 }}>
                         <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{item.name}</Text>
                     </View>
+                    
                     <View style={{ flexDirection: 'row' }}>
                         <View style={{ flex: 1, alignItems: 'center' }}>
                             <Image style={{ width: 100, height: 100 }}
@@ -34,7 +36,9 @@ export default function frameworks() {
                             <Text>{item.description} </Text>
                         </View>
                     </View>
+                    
                     <View style={{ height: 1, backgroundColor: '#ccc', marginTop: 20, width: '80%', alignSelf: 'center' }} />
+                
                 </View>
             ))}
         </ScrollView >
