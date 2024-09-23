@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: '#010101',
         fontWeight: 'bold',
-        // textAlign: 'center',
     },
     titleTwo: {
         textAlign: 'center',
@@ -68,13 +67,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         flexDirection: 'column',
         width: '100%',
-        //alignItems: 'center', // Alinha a imagem e o texto verticalmente
-        // position: 'relative', // Permite o posicionamento absoluto do botão
     },
     itemTwoDetails: {
         flexDirection: 'row', // Organiza imagem e texto lado a lado
         alignItems: 'center', // Alinha a imagem e o texto verticalmente
-        // position: 'relative', // Permite o posicionamento absoluto do botão
     },
 
     itemTwoButtonText: {

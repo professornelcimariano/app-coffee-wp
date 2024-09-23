@@ -20,7 +20,7 @@ export default function frameworks() {
     return (
         <ScrollView contentContainerStyle={{ display: 'flex', padding: 10 }}>
             {frameworks.map(item => (
-                <View style={{ display: 'flex', flexDirection: 'column' }}>
+                <View key={item.id} style={{ display: 'flex', flexDirection: 'column' }}>
                     <View style={{ alignItems: 'center', justifyContent: 'center', padding: 20 }}>
                         <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{item.name}</Text>
                     </View>
