@@ -1,6 +1,8 @@
 const express = require("express"); // Importando o express
 const app = express(); // Iniciando o express, passando o express pra variável app
 app.use(express.json());
+const port = 4000;
+
 // Importe da conexão com o banco de dados
 //const db = require('./models/db')
 const languages = require('./models/languages')
@@ -28,6 +30,61 @@ app.get('/about', async (req, res) => {
         "Description": "O Aplicativo 'Coffee With Programation' - Professor Nelci Mariano, é um app desenvolvido em React-Nativo cujo o objetivo é ser um material de consulta para os alunos que tem aula de Programação Mobile comigo, a idéia é permitir que esses acessem ao Projeto via GitHub e verifiquem a codificação deste, servindo de referência para a criação de seus Projetos Mobile"
     })
 })
+
+
+// Requisição com axios
+
+const path = require('path'); // Configuração para acessar o arquivo products.json
+const axios = require('axios');
+// Servindo arquivos estáticos da pasta 'public'
+app.use(express.static(path.join(__dirname, 'public'))); // Configuração para acessar o arquivo products.json na pasta pública
+app.use(express.json()); // para lidar com JSON
+app.use(express.urlencoded({ extended: true }));
+
+// npm install axios
+// crie a const axios na parte de cima -> const axios = require('axios');
+// http://localhost:4000/produtos
+app.get("/coffeeparings", function (req, res) {
+  axios.get('http://localhost:'+port+'/coffeeparings.json')
+    .then(response => {
+      res.json(response.data);      
+    })
+    .catch(error => {
+      res.status(500).send('Erro ao ler o arquivo');
+    });
+
+});
+
+/*
+A função de callback "response" acima, é chamada quando a promessa retornada por axios.get é resolvida. 
+O valor response é passado para esta função, e ele contém a resposta da solicitação HTTP feita com o Axios.
+
+O objeto response tem várias propriedades úteis, incluindo:
+
+response.data: os dados retornados pelo servidor. No seu caso, isso seria o conteúdo do arquivo products.json.
+response.status: o código de status HTTP da resposta.
+response.statusText: a mensagem de status HTTP da resposta.
+response.headers: os cabeçalhos da resposta.
+response.config: a configuração que foi usada para fazer a solicitação.
+*/
+
+
+//Retorna um produto específico
+//http://localhost:4000/produtos/1
+app.get("/coffeeparing/:id", function (req, res) { // Define uma rota que recebe um parâmetro id
+  axios.get('http://localhost:'+port+'/coffeeparings.json') // Faz uma solicitação GET para o arquivo products.json
+    .then(response => { // função de callback que é chamada quando a promessa retornada. A resposta da solicitação é passada para esta função.
+      // const {listProduct} = response.data; //extrai a lista de produtos dos dados da resposta.
+      const listProduct = response.data.listProduct; //extrai a lista de produtos dos dados da resposta.
+      // const {id} = req.params; //extrai o parâmetro id da URL
+      const id = req.params.id; //extrai o parâmetro id da URL
+      const product = listProduct.find(product => product.id == id); // Procura o produto com o ID correspondente no array listProduct
+      res.json(product);
+    })
+    .catch(error => {
+      res.status(500).send('Erro ao ler o arquivo');
+    });
+});
 
 // SELECT languages
 app.get("/select-languages", async (req, res) => { //async define uma função assíncrona

@@ -75,6 +75,14 @@ export default function Index() {
             </TouchableOpacity>
           </Link>
 
+          <Link href="/coffeeparings" style={[styles.button, styles.backgroundSecond]} asChild>
+            <TouchableOpacity>
+              <Text style={styles.buttonOneText}>
+                <Icon name="bookmark" size={20} /> Frameworks
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
         </View>
       </ImageBackground>
     </ScrollView>

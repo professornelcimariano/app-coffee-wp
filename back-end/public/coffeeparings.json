@@ -1,0 +1,40 @@
+{
+    "list": [
+        {
+            "id": 1,
+            "title": "Croissant",
+            "description": "Assim como o croissant exige uma técnica apurada e várias camadas de preparo, a Aprendizagem Baseada em Projetos demanda um processo de construção em etapas e uma execução cuidadosa para um resultado completo.",
+            "image": "coffee-pairing-1"
+        },
+        {
+            "id": 2,
+            "title": "Bolo de Cenoura",
+            "description": "O bolo de cenoura, com sua massa leve e cobertura de chocolate, representa a Aprendizagem Colaborativa, onde diferentes elementos e esforços se combinam harmoniosamente para criar um resultado final delicioso.",
+            "image": "coffee-pairing-2"
+        },
+        {
+            "id": 3,
+            "title": "Pão de Queijo",
+            "description": "Assim como o pão de queijo, com sua crocância externa e suavidade interna, requer precisão para alcançar a textura ideal, a Aprendizagem Baseada em Problemas envolve a busca pela solução perfeita com pensamento crítico e resolução de problemas.",
+            "image": "coffee-pairing-3"
+        },
+        {
+            "id": 4,
+            "title": "Biscoito Amanteigado",
+            "description": "Os biscoitos amanteigados, simples mas sofisticados, representam a Aprendizagem Autodirigida, que valoriza a autonomia do aluno em seguir seu próprio caminho de aprendizado com clareza e simplicidade.",
+            "image": "coffee-pairing-4"
+        },
+        {
+            "id": 5,
+            "title": "Torrada com Manteiga",
+            "description": "Assim como uma torrada com manteiga oferece uma base sólida e uma variedade de opções de personalização, a Aprendizagem Híbrida permite a mistura de diferentes métodos de ensino para criar uma experiência de aprendizado flexível e adaptável.",
+            "image": "coffee-pairing-5"
+        },
+        {
+            "id": 6,
+            "title": "Brownie",
+            "description": "O brownie, com seu equilíbrio de texturas e sabores intensos, reflete a Aprendizagem Baseada em Jogos, onde a experiência envolvente e prazerosa é fundamental para engajar os alunos no processo de aprendizado.",
+            "image": "coffee-pairing-6"
+        }
+    ]
+}
