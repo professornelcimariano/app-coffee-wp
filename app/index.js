@@ -43,6 +43,8 @@ export default function Index() {
             <Icon name="coffee" size={30} color="#fff" /> <Icon name="code" size={20} color="#fff" /> print, function
           </Text>
 
+          
+
           <Link href="/products" style={[styles.button, styles.backgroundSecond]} asChild>
             <TouchableOpacity>
               <Text style={styles.buttonOneText}>
@@ -78,7 +80,31 @@ export default function Index() {
           <Link href="/coffeeparings" style={[styles.button, styles.backgroundSecond]} asChild>
             <TouchableOpacity>
               <Text style={styles.buttonOneText}>
-                <Icon name="bookmark" size={20} /> Frameworks
+                <Icon name="bookmark" size={20} /> Acompanhamento Pedagógico
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
+          <Link href="/notification" style={[styles.button, styles.backgroundSecond]} asChild>
+            <TouchableOpacity>
+              <Text style={styles.buttonOneText}>
+                <Icon name="bookmark" size={20} /> Notificação
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
+          <Link href="/map" style={[styles.button, styles.backgroundSecond]} asChild>
+            <TouchableOpacity>
+              <Text style={styles.buttonOneText}>
+                <Icon name="map" size={20} /> Mapa
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
+          <Link href="/map2" style={[styles.button, styles.backgroundSecond]} asChild>
+            <TouchableOpacity>
+              <Text style={styles.buttonOneText}>
+                <Icon name="map" size={20} /> Distância
               </Text>
             </TouchableOpacity>
           </Link>

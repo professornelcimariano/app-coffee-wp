@@ -15,18 +15,21 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         boxShadow: '5px 4px 3px rgba(0, 0, 0, 0.4)', /* offset-x | offset-y | blur-radius | spread-radius | color */
     },
-    scrollview : { flex: 1},
+    scrollview: {
+        flexGrow: 1,
+        justifyContent: 'center',
+    },
     container: {
         flex: 1,
         padding: 20,
     },
     backgroundOne: {
-        flex: 1,
+        // flex: 1,
         width: '100%',
-        height: '100%',
+        minHeight: '100%'
     },
     overlayOne: {
-        ...StyleSheet.absoluteFillObject,
+        // ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(38, 15, 13, 0.8)', // Cor preta com 50% de opacidade
         justifyContent: 'center',
         alignItems: 'center',
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 20,
     },
-    
+
     buttonOneText: {
         flex: 1,
         fontSize: 18,

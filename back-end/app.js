@@ -33,7 +33,6 @@ app.get('/about', async (req, res) => {
 
 
 // Requisição com axios
-
 const path = require('path'); // Configuração para acessar o arquivo products.json
 const axios = require('axios');
 // Servindo arquivos estáticos da pasta 'public'

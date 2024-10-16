@@ -11,7 +11,6 @@ export default function About() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        // fetch('http://10.66.82.55:4000/about')
         fetch(API_URL + '/about')
             .then((response) => {
                 if (!response.ok) {
