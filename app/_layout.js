@@ -28,6 +28,7 @@ export default function RootLayout() {
       <Stack.Screen name="notification" options={{title: 'Notificação'}} />
       <Stack.Screen name="map" options={{title: 'Mapa'}} />
       <Stack.Screen name="map2" options={{title: 'Mapa'}} />
+      <Stack.Screen name="contacts" options={{title: 'Contatos'}} />
       {/* <Stack.Screen name="frameworksingle/[id]" options={{ title: 'Frameworks WP' }} /> */}
       {/* <Stack.Screen name="tabs/_layout" options={{ }} /> */}
     </Stack>

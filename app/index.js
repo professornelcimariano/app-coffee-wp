@@ -109,6 +109,14 @@ export default function Index() {
             </TouchableOpacity>
           </Link>
 
+          <Link href="/contacts" style={[styles.button, styles.backgroundSecond]} asChild>
+            <TouchableOpacity>
+              <Text style={styles.buttonOneText}>
+                <Icon name="map" size={20} /> Contatos
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
         </View>
       </ImageBackground>
     </ScrollView>
